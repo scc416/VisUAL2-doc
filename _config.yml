@@ -2,3 +2,4 @@ theme: jekyll-theme-leap-day
 title: VisUAL2
 github:
   repository_url: https://github.com/scc416/Visual2
+show_downloads: true
