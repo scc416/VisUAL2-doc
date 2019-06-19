@@ -14,7 +14,6 @@ See the [README](https://scc416.github.io/Visual2-doc/READ) For the repo contain
 
 See the [UAL Guide](https://scc416.github.io/Visual2-doc/guide) for a top-down guide to ARM assembly language supported by VisUAL2
 
-
-VisUAL2 can be [here](https://scc416.github.io/Visual2-doc/download) 
+VisUAL2 can be [download here](https://scc416.github.io/Visual2-doc/download) 
 
 VisuAL is designed to be self-documenting: no manual needed. Try it and see!
