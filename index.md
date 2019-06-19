@@ -7,12 +7,12 @@
 
 ## Getting Started as a Developer
 
-See the [README](https://github.com/ImperialCollegeLondon/Visual2/blob/master/README.md) For the repo containing all source code and developer's documentation. Visual2 development is currently restricted to Imperial College students and will be run as an open-source project shortly.
+See the [README](https://scc416.github.io/Visual2-doc/READ) For the repo containing all source code and developer's documentation. Visual2 development is currently restricted to Imperial College students and will be run as an open-source project shortly.
 
 
 ## Getting Started as a User
 
-See the [UAL Guide](#guide) for a top-down guide to ARM assembly language supported by VisUAL2
+See the [UAL Guide](https://scc416.github.io/Visual2-doc/guide) for a top-down guide to ARM assembly language supported by VisUAL2
 
 
 VisUAL2 can be downloaded as portable Windows, OS-X and linux binaries, or can be recompiled from source.
