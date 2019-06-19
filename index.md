@@ -1,4 +1,4 @@
-# VisUAL2 - A User-friendly Educational Assembler and Simulator for ARM UAL.
+# VisUAL2 - A User-friendly Educational Assembler and Simulator for ARM UAL. (site still under construction)
 
  VisUAL2 is a cross-platform tool that makes it very easy for beginners to write small and medium-sized ARM assembler programs, with no manual and intuitive visual debugging. Even those very familiar with ARM assembler have found VisUAL2 useful for quick writing and debugging. The IDE has helpful error messages and an ergononic GUI that makes debugging visually intuitive.
  
