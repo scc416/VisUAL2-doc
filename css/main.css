@@ -130,10 +130,10 @@ a.nav-link:hover, a.nav-link:active {
   min-width: 180px;
 }
 
-a.foot-link {
-  display: block;
-  line-height: var(--feather-line-height-xlarge);
-}
+/*a.foot-link {*/
+/*  display: block;*/
+/*  line-height: var(--feather-line-height-xlarge);*/
+/*}*/
 
 a.foot-link:link, a.foot-link:visited {
   color: white;
