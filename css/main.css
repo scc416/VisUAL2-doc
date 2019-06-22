@@ -137,12 +137,12 @@ a.nav-link:hover, a.nav-link:active {
 
 a.foot-link:link, a.foot-link:visited {
   color: white;
-  text-decoration: none;
+/*  text-decoration: none;*/
 }
 
 a.foot-link:hover, a.foot-link:active {
   color: var(--tw-color-blue-faded);
-  text-decoration: none;
+/*  text-decoration: none;*/
 }
 
 .footer-margin {
