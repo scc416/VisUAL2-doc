@@ -74,7 +74,7 @@ custom_css: memberships.css
                     4
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    condInstr.InsExec != IMEM ins $$\|$$ IDP(exec, op2)
+                    condInstr.InsExec != IMEM ins || IDP(exec, op2)
                 </td>
             </tr>
             <tr>
@@ -106,7 +106,7 @@ custom_css: memberships.css
                     8
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    op2 == Op2.NumberLiteral $$\_$$ $$\|$$ Op2.RegisterWithShift($$\_$$, $$\_$$, 0u)
+                    op2 == Op2.NumberLiteral _ || Op2.RegisterWithShift(_, _, 0u)
                 </td>
             </tr>
             <tr>
@@ -201,7 +201,7 @@ custom_css: memberships.css
                     15
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    ins != LDR $$\|$$ STR $$\|$$ LDM $$\|$$ STM
+                    ins != LDR || STR || LDM || STM
                 </td>
             </tr>
             <tr>
@@ -209,7 +209,7 @@ custom_css: memberships.css
                     16
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    ins == LDR $$\|$$ STR $$\|$$ LDM $$\|$$ STM
+                    ins == LDR || STR || LDM || STM
                 </td>
             </tr>
             <tr>

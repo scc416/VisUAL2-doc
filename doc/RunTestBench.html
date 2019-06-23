@@ -73,7 +73,7 @@ custom_css: memberships.css
                     2
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    results == Error(mess) $$\|$$ (Ok(tabId, tests)  TabId = tabId)
+                    results == Error(mess) || (Ok(tabId, tests)  TabId = tabId)
                 </td>
             </tr>
             <tr>
@@ -149,7 +149,7 @@ custom_css: memberships.css
                     6
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    RunMode != FinishedMode ri $$\|$$ RunErrorMode ri $$\|$$ ActiveMode($$\_$$, ri)
+                    RunMode != FinishedMode ri || RunErrorMode ri || ActiveMode(_, ri)
                 </td>
             </tr>
             <tr>
@@ -257,7 +257,7 @@ custom_css: memberships.css
                     12
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    RunMode == FinishedMode ri $$\|$$ RunErrorMode ri $$\|$$ ActiveMode($$\_$$, ri)
+                    RunMode == FinishedMode ri || RunErrorMode ri || ActiveMode(_, ri)
                 </td>
             </tr>
             <tr>

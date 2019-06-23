@@ -151,7 +151,7 @@ custom_css: memberships.css
                     8
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    RunMode != ResetMode $$\|$$ ActiveMode(Stopping, ri')
+                    RunMode != ResetMode || ActiveMode(Stopping, ri')
                 </td>
             </tr>
             <tr>
@@ -289,7 +289,7 @@ custom_css: memberships.css
                     17
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    ri.State != PSExit $$\|$$ PSError EXIT $$\|$$ PSError TBEXIT
+                    ri.State != PSExit || PSError EXIT || PSError TBEXIT
                 </td>
             </tr>
             <tr>
@@ -453,7 +453,7 @@ custom_css: memberships.css
                     27
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    ri.State == PSExit  $$\|$$ PSError EXIT $$\|$$ PSError TBEXIT
+                    ri.State == PSExit  || PSError EXIT || PSError TBEXIT
                 </td>
             </tr>
             <tr>
@@ -968,7 +968,7 @@ custom_css: memberships.css
                     57
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    tB == Ok(tbTab, $$\_$$)
+                    tB == Ok(tbTab, _)
                 </td>
             </tr>
             <tr>
@@ -1074,7 +1074,7 @@ custom_css: memberships.css
                     63
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    tb != Ok(tbTab, $$\_$$)
+                    tb != Ok(tbTab, _)
                 </td>
             </tr>
             <tr>

@@ -208,7 +208,7 @@ custom_css: memberships.css
                     10
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    ri.State == PSError(“Run time error“ ($$\_$$pos, msg))
+                    ri.State == PSError(“Run time error“ (_pos, msg))
                 </td>
             </tr>
             <tr>
@@ -378,7 +378,7 @@ custom_css: memberships.css
                     20
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    ri.State == PSError EXIT $$\|$$ PSError TBEXIT $$\|$$ PSExit
+                    ri.State == PSError EXIT || PSError TBEXIT || PSExit
                 </td>
             </tr>
             <tr>

@@ -130,7 +130,7 @@ custom_css: memberships.css
                 6
             </td>
             <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                RunMode != ActiveMode(Paused, ri') $$\|$$ RunErrorMode ri' $$\|$$ FinishedMode ri' $$\|$$ ParseErrorMode $$\|$$ ResetMode
+                RunMode != ActiveMode(Paused, ri') || RunErrorMode ri' || FinishedMode ri' || ParseErrorMode || ResetMode
             </td>
         </tr>
         <tr>
@@ -146,7 +146,7 @@ custom_css: memberships.css
                 7
             </td>
             <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                RunMode == ParseErrorMode $$\|$$ ResetMode
+                RunMode == ParseErrorMode || ResetMode
             </td>
         </tr>
         <tr>
@@ -209,7 +209,7 @@ custom_css: memberships.css
                 10
             </td>
             <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                RunMode == ActiveMode(Paused, ri') $$\|$$ RunErrorMode ri' $$\|$$ FinishedMode ri'
+                RunMode == ActiveMode(Paused, ri') || RunErrorMode ri' || FinishedMode ri'
             </td>
         </tr>
         <tr>
@@ -328,7 +328,7 @@ custom_css: memberships.css
                 18
             </td>
             <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                ri'.State == PSError $$\_$$ $$\|$$ PSExit $$\|$$ PSBreak
+                ri'.State == PSError _ || PSExit || PSBreak
             </td>
         </tr>
         <tr>
