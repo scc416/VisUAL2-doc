@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Initialisation - VisUAL2
+title: Try Parse and Indent Code - VisUAL2
 custom_css: memberships.css
 ---
 
 <div class="header squad-header">
     <div class="Grid container">
         <div id="header-text" class="Grid-cell">
-            <h1 class="large-title">Initialisation</h1>
+            <h1 class="large-title">Try Parse and Indent Code</h1>
         </div>
     </div>
 </div>
@@ -18,7 +18,7 @@ custom_css: memberships.css
             <button type="button" class="Button">Back</button></a>
         <br>
         <div style="text-align:center;" >
-            <img src="initialisation.png">
+            <img src="TryParseandIndentCode.png">
         </div>
         <table style="border-collapse: collapse; border: none; border-spacing: 0px;" style="margin: 0px auto;" align="center">
             <tr>
@@ -42,51 +42,15 @@ custom_css: memberships.css
                     1
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    Automatically after app has started
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="3" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    2
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    doFetchBl == false
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.        ReadOnlineInfo of Startup
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    2.        InitiateClose
+                    1.     TryParseAndIndentCode (test, steps, bkCon, testOpt)
                 </td>
             </tr>
             <tr>
                 <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    e1
+                    2
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    InitClose = true
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="3" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    3
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    doFetchBl == true  Promise success
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.        ReadOnlineInfo of Startup
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    2.        ReadOnlineInfoSuccess of string * VisualEvent
+                    lim == { Errors = [ ] }
                 </td>
             </tr>
             <tr>
@@ -94,33 +58,41 @@ custom_css: memberships.css
                     m1
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    OnlineInfo = newOnlineInfo; Settings = newSettings
+                    Decorations = newDecorations
                 </td>
             </tr>
             <tr>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    newOnlineInfo and newSettings are returned by the function readOnlineInfoResultUpdate
+                    newDecorations are returned by function tryParseAndIndentCode
                 </td>
             </tr>
             <tr>
                 <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    4
+                    3
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    InExam
+                    test == false
                 </td>
             </tr>
             <tr>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     UpdateDialogBox of DialogBox
+                    1.     MatchLoadImage (loadImage, steps, bkCon)
                 </td>
             </tr>
             <tr>
                 <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    m2
+                    4
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    DialogBox = Some Alert
+                    loadImage != Some(lim, $$\_$$)
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    e1
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    m1
                 </td>
             </tr>
             <tr>
@@ -128,15 +100,20 @@ custom_css: memberships.css
                     5
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     InitiateClose
+                    loadImage == Some(lim, $$\_$$)
                 </td>
             </tr>
             <tr>
-                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    m3
+                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    m2
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    InitClose = true
+                    EditorEnable = newEnableEditors ; RunMode = newRunMode
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    newEnableEditors and newRunMode are returned by the function matchLI
                 </td>
             </tr>
             <tr>
@@ -144,15 +121,15 @@ custom_css: memberships.css
                     6
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     DialogUpdated
+                    1.     AsmStepDisplay (breakCon, steps, ri)
                 </td>
             </tr>
             <tr>
                 <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    m4
+                    e2
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    DialogUpdated  = true
+                    Refer to AsmStepDisplay for the rest of the diagram
                 </td>
             </tr>
             <tr>
@@ -160,90 +137,65 @@ custom_css: memberships.css
                     7
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    Click anywhere
+                    test == true
                 </td>
             </tr>
             <tr>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     CloseDialog
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    8
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    !InExam
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     InitiateClose
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    e2
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    InitClose = true
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    DialogBox = None ; DialogUpdated = false
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="3" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    9
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    doFetchBl == true  Promise fail
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     ReadOnlineInfo of Startup
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    2.     ReadOnlineInfoFail of VisualEvent
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    m5
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    OnlineInfo = newOnlineInfo
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    newOnlineInfo is returned by the function readOnlineInfoResultUpdate
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    10
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    InExam
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     UpdateDialogBox of DialogBox
+                    1.     MatchLoadImageTest (loadImage, testOpt.Value)
                 </td>
             </tr>
             <tr>
                 <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    m6
+                    8
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    DialogBox = Some Alert
+                    loadImage != Some(lim, $$\_$$)
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    e3
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    m1
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    9
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    loadImage == Some(lim, $$\_$$)
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    m3
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    EditorEnable = newEditorEnable
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    newEditorEnable is returned by function getTestRunInfo
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    10
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    GetTestRunInfo (resultOpt, false, tests)
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    e4
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    Refer to “GetTestRunInfo” for the rest of the diagram
                 </td>
             </tr>
             <tr>
@@ -251,70 +203,23 @@ custom_css: memberships.css
                     11
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     InitiateClose
+                    lim != { Errors = [ ] }
                 </td>
             </tr>
             <tr>
                 <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    m7
+                    m4
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    InitClose = true
+                    RunMode = ParseErrorMode
                 </td>
             </tr>
             <tr>
                 <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    12
+                    e5
                 </td>
                 <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     DialogUpdated
-                </td>
-            </tr>
-            <tr>
-                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    m8
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    DialogUpdated  = true
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    13
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    Click anywhere on the app
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     CloseDialog
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    14
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    !InExam
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    1.     InitiateClose
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    e3
-                </td>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    InitClose = true
-                </td>
-            </tr>
-            <tr>
-                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
-                    DialogBox = None ; DialogUpdated = false
+                    The rest of the diagram is same as the other side of the diagram, except it is m4 but not m1
                 </td>
             </tr>
         </table>
