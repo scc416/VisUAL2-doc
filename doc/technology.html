@@ -21,20 +21,19 @@ custom_css: memberships.css
         
         <div class="Grid-cell sizeFull membership">
             <!-- Logo -->
-            <img src="assets/windows.png" class="membership-logo">
+            <img src="../assets/windows.png" class="membership-logo">
                 
                 <div class="name-handle">
                     <!-- Name -->
-                    <h2>Windows</h2>
+                    <h2>Electron</h2>
                     
                 </div>
                 
                 <!-- Description -->
-                <p>Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe Click "Download" to download .exe</p>
-
-                <!-- Visit website -->
-                <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-                <button type="button" class="Button">Download</button></a>
+                <p>Applications are built differently for various platforms, distinct technologies and framework are used, particular knowledge is required. Electron makes building cross-platform applications easier. It is a JavaScript-based framework (using Chromium and Node.js) for developing cross-platform (Windows, MacOS and Linus) applications with a single code base of HTML, CSS, and JavaScript files. It offers Chrome’s developer tools, save settings on computer, open & save file, menu bar and low-level accessibility, such as local and global keyboard shortcuts. Applications built with Electron can be packaged with “electron-forge”, “electron-builder” or “electron-packager” as Windows, MacOS or Linux application. “Electron-packager” is used in V2. Electron is launched when “yarn launch” is executed in the terminal.
+                <br>Main Process: There is only one main process, it is created once the application is launched using Electron. The process run “main.js” (as defined in main script of “package.json”, the startup script). “main.js” creates browser windows by making a BrowserWindow instance, displays the GUI and handles system events. Main process manages the flow of data and requests between windows. It waits for request from the renderer process and launches new windows. In this project, there is only one window, hence the main process manages one webpage and the corresponding renderer process. When the application is launched, main process creates a window with “app/index.html”, it waits for the window to be closed then the process is terminated.
+                <br>Renderer Process: This process displays the GUI of the application. There can be more than one renderer process, they are independent and all managed by the main process. There is only one renderer process in this project. “renderer.js” is launched by main process as the browser window is created and rendered with Chromium.
+                </p>
 
         </div>
         
