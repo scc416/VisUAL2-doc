@@ -34,7 +34,6 @@ custom_css: memberships.css
                 <br>Main Process: There is only one main process, it is created once the application is launched using Electron. The process run “main.js” (as defined in main script of “package.json”, the startup script). “main.js” creates browser windows by making a BrowserWindow instance, displays the GUI and handles system events. Main process manages the flow of data and requests between windows. It waits for request from the renderer process and launches new windows. In this project, there is only one window, hence the main process manages one webpage and the corresponding renderer process. When the application is launched, main process creates a window with “app/index.html”, it waits for the window to be closed then the process is terminated.
                 <br>Renderer Process: This process displays the GUI of the application. There can be more than one renderer process, they are independent and all managed by the main process. There is only one renderer process in this project. “renderer.js” is launched by main process as the browser window is created and rendered with Chromium.
                 </p>
-
         </div>
         
         <div class="Grid-cell sizeFull membership">
