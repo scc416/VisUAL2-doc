@@ -19,8 +19,72 @@ custom_css: memberships.css
             <button type="button" class="Button">Back to Documentation</button></a>
         <br>
         
+        
         <div class="Grid-cell sizeFull membership">
             <!-- Logo -->
+            <img src="../assets/fsharp.png" class="membership-logo">
+                
+            <div class="name-handle">
+                <!-- Name -->
+                <h2>F#</h2>
+            </div>
+                
+            <!-- Description -->
+            <p>Concise functional programming language, but it also supports other impure programming. It has a type system, which significantly reduces bugs and errors.<br>
+            The project “VisUAL2.sln” consists of 3 parts, the emulator, main and renderer, each contain F# file(s). The order of these files is noteworthy because dependency is strictly one-way in F#.
+            </p>
+        </div>
+        
+        
+        <div class="Grid-cell sizeFull membership">
+            <!-- Logo -->
+            <img src="../assets/fsharp.png" class="membership-logo">
+                
+            <div class="name-handle">
+                <!-- Name -->
+                <h2>Monaco Editor</h2>
+            </div>
+            
+            <!-- Description -->
+            <p>It is a browser-based code editor generated from Visual Studio Code’s resources. It has IntelliSense like VS Code, which has features such as code completion, parameter info, quick info and member lists. Another highlight is the syntax colourisation and various customisation options.
+            </p>
+        </div>
+        
+        <div class="Grid-cell sizeFull membership">
+            <!-- Logo -->
+            <img src="../assets/fsharp.png" class="membership-logo">
+                
+                <div class="name-handle">
+                    <!-- Name -->
+                    <h2>Fable</h2>
+                </div>
+                
+                <!-- Description -->
+                <p>
+                Fable is a F# to JavaScript compiler. Fable compile F# to ES2015+ AST and Babel compiles the AST to ES5 JavaScript code. A JS client (fable-loader in this project) resolves dependencies (in “package.json”) and outputs the actual JS code (“main.js" as defined in “package.json”).<br>
+                Fable starts compiling the F# projects when “yarn start” is executed in the terminal. “Main.fsproj” (includes “main.fs”) is compiled into “main.js”, “Renderer.fsproj” (includes F# files in renderer and emulator, as files of the renderer are dependent on them) is compiled into “renderer.js”.
+                </p>
+                </div>
+        
+        <div class="Grid-cell sizeFull membership">
+            <!-- Logo -->
+            <img src="../assets/fsharp.png" class="membership-logo">
+                
+                <div class="name-handle">
+                    <!-- Name -->
+                    <h2>Webpack</h2>
+                </div>
+                
+                <!-- Description -->
+                <p>Static module bundler. As defined in “webpack.config.js”, the entry points are “src/Main/Main.fsproj” and “src/Renderer/Renderer.fsproj”. Webpack figures out which modules and libraries are these .fsproj files depend on. It then emits the output files “main.js” and “app/js/renderer.js” with Fable.<br>
+                Webpack only understands JavaScript and JSON files, loaders have to be defined so Webpack can interact with different formats of file. “fable-loader” allows webpack to transform F# files (.fsx and ,fsproj). Plugin “copy-webpack-plugin” is used to copy files into various folders for the usage of Monaco editor and vex.js (for tooltips).
+                </p>
+                </div>
+
+        <div class="Grid-cell sizeFull membership">
+            <!-- Logo -->
+
+            
             <img src="../assets/electron.png" class="membership-logo">
                 
                 <div class="name-handle">
