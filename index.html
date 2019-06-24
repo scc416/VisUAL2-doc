@@ -22,27 +22,28 @@ custom_css: index.css
 <div class="section grey">
     <div class="Grid container">
         <div id="philosophy-text" class="Grid-cell u-size4of6 u-before1of6 u-after1of6">
-            <h1 class="small-title center-text mega-margin">Model, View, Update (Site is under construction)</h1>
-            <p class="center-text mega-margin">For anything to grow, you need three things:</p>
+            <h1 class="small-title center-text mega-margin">Model, View, Update</h1>
+            <p class="center-text mega-margin">VisUAL2 assembles and simulates the ARMv4T instruction sets with condition field. The application follows the pattern of MVU:</p>
         </div>
     </div>
     <div class="Grid small-container">
         <div class="Grid-cell u-size1of3 emoji-card">
             <img src="assets/fire.png" alt="Fire emoji" class="emoji-img center-margin large-margin">
             <h1 class="center-text medium-margin">Model</h1>
-            <p class="center-text">Heat means work.<br/><br/>Upstream contributions, bug fixes, designs, docs--the rigorous work that drives the community.</p>
+            <p class="center-text">Immutable data structure that contains the state of the application
+            <br>Function init produces the initial model</p>
         </div>
 
         <div class="Grid-cell u-size1of3 emoji-card">
             <img src="assets/sun.png" alt="Sun emoji" class="emoji-img center-margin large-margin">
             <h1 class="center-text medium-margin">View</h1>
-            <p class="center-text">Light means visibility. <br/><br/>For the projects, contributions, opportunities, challenges, and people that impact the community.</p>
+            <p class="center-text">Pure function that produces UI (React elements) with the current model. When user interacts with the UI, a message is sent to “Update” </p>
         </div>
 
         <div class="Grid-cell u-size1of3 emoji-card">
             <img src="assets/pride.png" alt="Pride heart emoji" class="emoji-img center-margin large-margin">
             <h1 class="center-text medium-margin">Update</h1>
-            <p class="center-text">Love means culture and support.<br/><br/>Why we care. How we work. Actions that grow the community.</p>
+            <p class="center-text">Pure function that produces the new model with the message and previous model.</p>
         </div>
 
     </div>
