@@ -19,24 +19,24 @@ custom_css: memberships.css
         <ol>
  
  <li>
-    Follow instructions to install <a href="https://yarnpkg.com/lang/en/docs/install/">yarn</a>(which tell you to install Node as well).</li>
+    Follow instructions to install <a href="https://yarnpkg.com/lang/en/docs/install/" target="_blank">yarn</a>(which tell you to install Node as well).</li>
     <li>
     
- Download and install the latest (2.x) <a href="https://www.microsoft.com/net/learn/get-started">Dotnet Core SDK</a>
-  <br>  For Mac users, download and install <a href="http://www.mono-project.com/download/stable/">Mono</a> from official website (the version from brew is incomplete, may lead to MSB error on step 7).
+ Download and install the latest (2.x) <a href="https://www.microsoft.com/net/learn/get-started" target="_blank">Dotnet Core SDK</a>
+  <br>  For Mac users, download and install <a href="http://www.mono-project.com/download/stable/" target="_blank">Mono</a> from official website (the version from brew is incomplete, may lead to MSB error on step 7).
     </li>
     <li>
     Download & unzip the Visual2 repo, or if contributing clone it locally, or fork it on github and then clone it locally.
     </li>
     <li>
-    Navigate to the project root directory (which contains this README) in a command-line interpreter. For Windows usage make sure if possible for convenience that you have a _tabbed_ command-line interpreter that can be started direct from file explorer within a specific directory (by right-clicking on the explorer directory view). That makes things a lot more pleasant. I recommend <a href="https://github.com/zeit/hyper/releases">Hyper</a>, for example, runs multiple tabs and will split window between two tabs, great for running start and launch scripts concurrently in a single window. Beware that under Windows "Hyper" uses "ctrl-shift-C", "ctrl-shift-V" for copy and paste.
+    Navigate to the project root directory (which contains this README) in a command-line interpreter. For Windows usage make sure if possible for convenience that you have a _tabbed_ command-line interpreter that can be started direct from file explorer within a specific directory (by right-clicking on the explorer directory view). That makes things a lot more pleasant. I recommend <a href="https://github.com/zeit/hyper/releases" target="_blank">Hyper</a>, for example, runs multiple tabs and will split window between two tabs, great for running start and launch scripts concurrently in a single window. Beware that under Windows "Hyper" uses "ctrl-shift-C", "ctrl-shift-V" for copy and paste.
     </li>
     <li>
     
     Fetch the required "npm" packages by executing "yarn install". This project consistently uses "yarn" Node package manager instead of "npm".
     </li>
     <li>
-     On macOS or linux ensure you have <a href="https://fsprojects.github.io/Paket/installation.html">paket installed</a>. Run "setup.bat" (on Windows) or "sh setup.sh" (on linux or macOS). This downloads and updates the submodules, and installs their packages individually (necessary because of the submodule structure), then restores the global packages. On other systems run the statements in this file (modified if needed for your system) individually. If MSB error occur while running the script (on macOS) and you were using Mono installed by brew previously, run "brew uninstall mono" and refer to step 2 for install Mono correctly).
+     On macOS or linux ensure you have <a href="https://fsprojects.github.io/Paket/installation.html" target="_blank">paket installed</a>. Run "setup.bat" (on Windows) or "sh setup.sh" (on linux or macOS). This downloads and updates the submodules, and installs their packages individually (necessary because of the submodule structure), then restores the global packages. On other systems run the statements in this file (modified if needed for your system) individually. If MSB error occur while running the script (on macOS) and you were using Mono installed by brew previously, run "brew uninstall mono" and refer to step 2 for install Mono correctly).
     </li>
     <li>
      Goto step 10 if all you want to do is to generate uptodate binaries.
