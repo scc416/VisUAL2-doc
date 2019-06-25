@@ -36,8 +36,7 @@ custom_css: memberships.css
             <p>Concise functional programming language, but it also supports other impure programming. It has a type system, which significantly reduces bugs and errors.<br>
             The project “VisUAL2.sln” consists of 3 parts, the emulator, main and renderer, each contain F# file(s). The order of these files is noteworthy because dependency is strictly one-way in F#.
             </p>
-            <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-                <button type="button" class="Button">Website</button></a>
+            <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
 
         </div>
         
@@ -55,8 +54,7 @@ custom_css: memberships.css
             <p>Monaco Editor is a browser-based code editor generated from Visual Studio Code’s resources. It has IntelliSense like VS Code, which has features such as code completion, parameter info, quick info and member lists. Another highlight is the syntax colourisation and various customisation options. React Monaco Editor is the react version of Monaco Editor.-
             </p>
             
-            <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-                <button type="button" class="Button">Website</button></a>
+            <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
 
         </div>
         
@@ -74,8 +72,8 @@ custom_css: memberships.css
                 Fable is a F# to JavaScript compiler. Fable compile F# to ES2015+ AST and Babel compiles the AST to ES5 JavaScript code. A JS client (fable-loader in this project) resolves dependencies (in “package.json”) and outputs the actual JS code (“main.js" as defined in “package.json”).<br>
                 Fable starts compiling the F# projects when “yarn start” is executed in the terminal. “Main.fsproj” (includes “main.fs”) is compiled into “main.js”, “Renderer.fsproj” (includes F# files in renderer and emulator, as files of the renderer are dependent on them) is compiled into “renderer.js”.
                 </p>
-                <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-                    <button type="button" class="Button">Website</button></a>
+                
+                    <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
 
                 </div>
         
@@ -93,8 +91,8 @@ custom_css: memberships.css
                 Webpack only understands JavaScript and JSON files, loaders have to be defined so Webpack can interact with different formats of file. “fable-loader” allows webpack to transform F# files (.fsx and ,fsproj). Plugin “copy-webpack-plugin” is used to copy files into various folders for the usage of Monaco editor and vex.js (for tooltips).
                 </p>
                 
-                <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-                    <button type="button" class="Button">Website</button></a>
+                
+                    <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
 
                 </div>
 
@@ -116,8 +114,7 @@ custom_css: memberships.css
                 <br>Renderer Process: This process displays the GUI of the application. There can be more than one renderer process, they are independent and all managed by the main process. There is only one renderer process in this project. “renderer.js” is launched by main process as the browser window is created and rendered with Chromium.
                 </p>
                 
-                <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-                <button type="button" class="Button">Website</button></a>
+                <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
 
         </div>
         
@@ -143,8 +140,7 @@ custom_css: memberships.css
                 There is also a component called command, which carry instructions that can lead to message(s). Command is returned by the functions Init and Update. Elmish is not implemented in the original V2.
             </p>
             
-            <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-            <button type="button" class="Button">Website</button></a>
+            <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
 
         </div>
 
@@ -160,8 +156,8 @@ custom_css: memberships.css
         <!-- Description -->
         <p>JavaScript Library for building user interface. Elements are immutable, they have to be created and rendered in order to update the UI. React compares the new elements with the previous elements, then it only updates the modified elements</p>
         
-        <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-        <button type="button" class="Button">Website</button></a>
+        
+        <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
 
         </div>
         
@@ -171,15 +167,30 @@ custom_css: memberships.css
         
         <div class="name-handle">
         <!-- Name -->
-        <h2>Tippy.js</h2>
+        <h2>Tippy</h2>
         </div>
         
         <!-- Description -->
-        <p>JavaScript library for implementing tooltips in V2. Tippy.js for React is the React version of Tippy.js</p>
-        
-        <a href="https://github.com/scc416/Visual2/releases/download/1.7.0/VisUAL2.Setup.1.7.0.exe">
-        <button type="button" class="Button">Website</button></a>
+        <p>JavaScript library for implementing tooltips (in the editors) in V2.</p>
 
+        <button type="button" class="Button" onClick="window.open('https://atomiks.github.io/tippyjs/','tippy.js')">Website</button>
+
+        </div>
+        
+        <div class="Grid-cell sizeFull membership">
+        <!-- Logo -->
+        <img src="../assets/tippy-react.png" class="membership-logo">
+        
+        <div class="name-handle">
+        <!-- Name -->
+        <h2>Tippy.js for React</h2>
+        </div>
+        
+        <!-- Description -->
+        <p>Tippy.js for React is the React version of Tippy.js, it implements the tooltips outside the editor</p>
+        
+        <button type="button" class="Button" onClick="window.open('https://github.com/atomiks/tippy.js-react','tippy.js for React')">Website</button>
+        
         </div>
         
         <div class="Grid-cell sizeFull membership">
@@ -192,12 +203,8 @@ custom_css: memberships.css
         </div>
         
         <!-- Description -->
-        <p>JavaScript library that implements all dialogs (except the open and save file dialog implemented by electron) in V2</p>
-        
-<!--        <a href="https://github.hubspot.com/vex/" target="_blank" type="button" class="Button">Website</a>-->
-
+        <p>JavaScript library that implements all dialogs (except the open and save file dialog implemented by electron) in V2</p> s
         <button type="button" class="Button" onClick="window.open('https://github.hubspot.com/vex/','vex')">Website</button>
-
         </div>
     </div>
 </div>
