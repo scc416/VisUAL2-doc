@@ -22,14 +22,15 @@ custom_css: memberships.css
         Whereas VisUAL uses Java to achieve platform-independence this project uses Javascript/HTML. However, in order to make code maintainable nearly all of the source is written in F#.</p>
         
         <h1>Project Structure</h1>
+        <br>
         <h3>package.json</h3>
         
-        Electron bundles [Chromium](https://www.chromium.org/) (View) and [node.js](https://nodejs.org/en/) (Engine),
+        Electron bundles <a href="https://www.chromium.org/" target="_blank">Chromium<a> (View) and [node.js](https://nodejs.org/en/) (Engine),
         therefore as in every "node.js" project, the "package.json" file specifies the (Node) module dependencies.
-        
-       <li>dependencies: node libraries that the executable code (and development code) needs
-       <li>dev-dependencies: node libraries only needed by development tools
-        
+        <ul>
+       <li>dependencies: node libraries that the executable code (and development code) needs</li>
+       <li>dev-dependencies: node libraries only needed by development tools</li>
+        </ul>
         
         Additionally, the section "scripts":
         
@@ -150,7 +151,7 @@ custom_css: memberships.css
         
         ## Packaging VisUAL2 as binaries
         
-        After you have compiled code (and checked it works) "yarn pack-all" will run electron packager and generate "./dist/os-name/*" files. See also "run-packager-all.bat" if using windows host to make macOS binary. See [the packaging issue](https://github.com/ImperialCollegeLondon/Visual2/issues/7) for more details of how this has been customised to work. Note that if this breaks you can still run individual targets as below.
+        After you have compiled code (and checked it works) <code>yarn pack-all</code> will run electron packager and generate "./dist/os-name/*" files. See also "run-packager-all.bat" if using windows host to make macOS binary. See [the packaging issue](https://github.com/ImperialCollegeLondon/Visual2/issues/7) for more details of how this has been customised to work. Note that if this breaks you can still run individual targets as below.
         
         Useful shortcuts for specific common target OS:
        <li>"yarn pack-osx" (macOS - but see below if running from windows host)</li>
