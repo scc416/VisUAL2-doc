@@ -16,7 +16,7 @@ custom_css: memberships.css
     <div class="container">
         <button type="button" class="Button" onclick="location.href='javascript:history.back()'">Back</button>
                 <br>
-        <p>Persistent states:</p>
+        <h5>Persistent states:</h5>
         <ul>
             <li>InitClose
                 <li>DialogBox
@@ -24,6 +24,12 @@ custom_css: memberships.css
                 <li>OnlineInfo
 
                 </ul>
+        <h5>Conditions</h5>
+        <ul>
+            <li>doFetchBl: defined by function readOnlineInfo basing on OnlineInfo.LastOnlineFetchTime of Model
+        <li>Promise success/failure: defined by the result output of function doFetch
+        <li>InExam: defined by the function remindInExams
+</ul>
         <div style="text-align:center;" >
             <img src="initialisation.png">
         </div>
