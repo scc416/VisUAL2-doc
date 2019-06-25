@@ -25,11 +25,17 @@ custom_css: memberships.css
         <ul>
             <li>dependencies: node libraries that the executable code (and development code) needs</li>
             <li>dev-dependencies: node libraries only needed by development tools</li>
-            <li>script: Defines the in-project shortcut commands, therefore when we use <code>yarn &lt;stript_key&gt;</code> is equivalent
+            <li>scripts: Defines the in-project shortcut commands, therefore when we use <code>yarn &lt;stript_key&gt;</code> is equivalent
                 to calling <code>&lt;script_value&gt;</code>. For example, in the root of the project, running in the terminal
                 <code>yarn launch</code> is equivalent to running <code>electron .</code>.</li>
         </ul>
-        
+        <div class="highlight highlight-source-json"><pre>{
+            <span class="pl-ii">...</span>
+            <span class="pl-s"><span class="pl-pds">"</span>scripts<span class="pl-pds">"</span></span>: {
+            <span class="pl-s"><span class="pl-pds">"</span>start<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>cd src/Main &amp;&amp; dotnet fable webpack --port free -- -w --config webpack.config.js<span class="pl-pds">"</span></span>,
+            <span class="pl-ii">...</span>
+            },
+            }</pre></div>
         
     <h1>Code Structure</h1>
         <p>
