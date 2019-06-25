@@ -73,6 +73,8 @@ custom_css: memberships.css
     <li><code>yarn pack-linux</code> (linux)</li>
     </ul><strong>Note on macOS binaries</strong>. These cannot be packaged as DMG (and therefore used) except on a macOS host. On macOS you need to run <code>yarn make-osx-dmg</code> which will FIRST run <code>yarn pack-osx</code> and then generate the macOS DMG file as <code>./dist/visual2-osx.dmg</code>.
     </div>
+    
+    <div class="container">
 
     <h2>Boilerplate Development</h2>
     <p>At some point you may want to change the boilerplate that glues this project together. Understanding all of the boilerplate is not normally needed, and takes some time, but it is possible since each part is quite simple and documented:</p>
@@ -91,5 +93,5 @@ custom_css: memberships.css
     <li><code>Nuget.Config</code>. Used by NuGet. You <em>can</em> view the project under Visual Studio and change packages in a GUI via NuGet but this is not recommended.</li>
     <li><code>ARM.Monaco.Editor.sln</code>. this solution file allows all three F# projects to be integrated by Visual Studio or Ionode. It is useful for editing code, but compiling is done via FABLE which uses information from <code>*.fsproj</code> files and ignores the <code>*.sln</code> file.</li>
     </ul>
-    </div>
+    </div></div>
 </div>
