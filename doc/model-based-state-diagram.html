@@ -16,9 +16,90 @@ custom_css: memberships.css
     <div class="container">
         <button type="button" class="Button" onclick="location.href='javascript:history.back()'">Back</button>
         <br>
-        <div style="text-align:center;" >
-            <img src="TryParseAndIndentCode.png">
+        <div style="text-align:center;">
         </div>
-        description
+        <p>Flow of data is explained with diagrams and tables (Read user guide for model-based state diagram that are not discussed in this report).
+        The items in the first column of the tables are either state or state change:
+        State: number prefix with i, m or e, represent by a circle on the diagram
+        i: state of the initial model
+        e: state of the final model
+        m: state of any other models in between
+        State change: numbered, represented by arrow pointing from one circle or junction to another
+        : The state change is triggered by user interaction
+        : The state change is decided by the previous message
+        : The state change is decided by the previous message basing on the state of the model or conditions, different state and/or conditions will lead to different stage change. This arrow always points out of a junction
+        Arrows can be accompanied by more than one message, user interaction and/or condition (these will be called as actions). These actions are numbered in sequence (in the second column), only the last action causes a change in state or leads to a junction.
+        Junctions in diagram aim to make the flow of data clearer. Different actions (message, user interaction and/or condition) can cause different state change and/or trigger different message. Arrows pointing out of a junction indicate action(s) is leading to different message or state.
+        In the second column of the tables, there are the details of the state (change). For a state, change(s) in state is listed. For a state change, it might include user interaction, messages and/or conditions in sequence:</p>
+            User interaction: Itemised, any of the itemised user interaction can trigger the message below
+            Message: Enumerated, only the last message causes a change in the state (in many cases there is only one message, and this message causes a change in the state)
+            Condition: not enumerate or itemized, based on the state of the model or conditions defined. If a condition is not defined, then it is part of the model (type model is defined in “Refs.fs”)
+        The order of the details are crucial, a message under an user interaction or condition means the former is triggered by the latter. An action (message, user interaction or condition) can trigger multiple messages. These messages might not be in the same cell. Multiple messages in a details do not indicates they are all triggered by the same user interaction or condition. An arrow only indicates a change in state (or junction).
+        <h2>Example</h2>
+        <p>In this example, the data flow of the action selecting tab is presented. <br>
+        The initial model has a non-empty editors map, therefore tab header(s) is displayed for user to select. When user click on button of tab x, this triggers the message SelectFileTab (state change 1). State change 2 and 3 indicate 2 different states. If x is equal to TabId in state, state remains as i (state change 2). If x is not equal to TabId in state, state become e (stage change 3).<br>
+        Persistent states:</p>
+        <ul>
+            <li>TabId
+        </ul>
+        <br>
+        <div style="text-align:center;" >
+            <img src="SelectFileTab.png">
+                </div>
+        <table style="border-collapse: collapse; border: none; border-spacing: 0px;" style="margin: 0px auto;" align="center">
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-top: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    State (Change)
+                </td>
+                <td style="border-right: 1px solid black; border-top: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    Details
+                </td>
+            </tr>
+            <tr>
+                <td style="border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;">
+                    i
+                </td>
+                <td style="border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0); padding-right: 3pt; padding-left: 3pt;">
+                    Initial model, Editors map is not empty
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    1
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    -          Click on button of tab x
+                </td>
+            </tr>
+            <tr>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    1.     SelectFileTab of int
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    2
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    x == TabId
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    3
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    x != TabId
+                </td>
+            </tr>
+            <tr>
+                <td style="border-left: 1px solid black; border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    e
+                </td>
+                <td style="border-right: 1px solid black; border-bottom: 1px solid black; padding-right: 3pt; padding-left: 3pt;">
+                    TabId = selected tab Id
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
