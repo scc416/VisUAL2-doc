@@ -111,14 +111,14 @@ custom_css: memberships.css
         
         <!-- Description -->
             <p>
-                A F# framework to implement the web architectural pattern MVU (refer to section for details), it uses react to build UI. The cycle of elmish is as follows:</p>
+                A F# framework to implement the web architectural pattern MVU (refer to section for details), it uses react to build UI. The cycle of elmish is as follows:
                 <ol>
                     <li>“Init” (pure function) produces the initial “Model” (immutable data structure) of the application</li>
                     <li>“View” (pure function) produce UI (React elements) with the current model</li>
                     <li>User interacts with the UI, a message is sent to “Update” (pure function)</li>
                     <li>“Update” produces the new “Model” with the message and previous “Model”</li>
                     <li>Repeat step 2 until the application is terminated</li>
-                </ol><p>
+                </ol>
                 There is also a component called command, which carry instructions that can lead to message(s). Command is returned by the functions Init and Update. Elmish is not implemented in the original V2.
             </p>
         </div>
