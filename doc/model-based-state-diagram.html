@@ -18,22 +18,24 @@ custom_css: memberships.css
         <br>
         <div style="text-align:center;">
         </div>
-        <p>Flow of data is explained with diagrams and tables (Read user guide for model-based state diagram that are not discussed in this report).
-        The items in the first column of the tables are either state or state change:
-        State: number prefix with i, m or e, represent by a circle on the diagram
-        i: state of the initial model
-        e: state of the final model
-        m: state of any other models in between
-        State change: numbered, represented by arrow pointing from one circle or junction to another
-        : The state change is triggered by user interaction
-        : The state change is decided by the previous message
-        : The state change is decided by the previous message basing on the state of the model or conditions, different state and/or conditions will lead to different stage change. This arrow always points out of a junction
-        Arrows can be accompanied by more than one message, user interaction and/or condition (these will be called as actions). These actions are numbered in sequence (in the second column), only the last action causes a change in state or leads to a junction.
-        Junctions in diagram aim to make the flow of data clearer. Different actions (message, user interaction and/or condition) can cause different state change and/or trigger different message. Arrows pointing out of a junction indicate action(s) is leading to different message or state.
+        <p>Flow of data is explained with diagrams and tables (Read user guide for model-based state diagram that are not discussed in this report).<br>
+        The items in the first column of the tables are either state or state change:<br>
+        State: number prefix with i, m or e, represent by a circle on the diagram<br>
+        i: state of the initial model<br>
+        e: state of the final model<br>
+        m: state of any other models in between<br>
+        State change: numbered, represented by arrow pointing from one circle or junction to another<br>
+        : The state change is triggered by user interaction<br>
+        : The state change is decided by the previous message<br>
+        : The state change is decided by the previous message basing on the state of the model or conditions, different state and/or conditions will lead to different stage change. This arrow always points out of a junction<br>
+        Arrows can be accompanied by more than one message, user interaction and/or condition (these will be called as actions). These actions are numbered in sequence (in the second column), only the last action causes a change in state or leads to a junction.<br>
+        Junctions in diagram aim to make the flow of data clearer. Different actions (message, user interaction and/or condition) can cause different state change and/or trigger different message. Arrows pointing out of a junction indicate action(s) is leading to different message or state.<br>
         In the second column of the tables, there are the details of the state (change). For a state, change(s) in state is listed. For a state change, it might include user interaction, messages and/or conditions in sequence:</p>
-            User interaction: Itemised, any of the itemised user interaction can trigger the message below
-            Message: Enumerated, only the last message causes a change in the state (in many cases there is only one message, and this message causes a change in the state)
-            Condition: not enumerate or itemized, based on the state of the model or conditions defined. If a condition is not defined, then it is part of the model (type model is defined in “Refs.fs”)
+        <ul>
+        <li>User interaction: Itemised, any of the itemised user interaction can trigger the message below
+        <li>Message: Enumerated, only the last message causes a change in the state (in many cases there is only one message, and this message causes a change in the state)
+        <li>Condition: not enumerate or itemized, based on the state of the model or conditions defined. If a condition is not defined, then it is part of the model (type model is defined in “Refs.fs”)
+        </ul>
         The order of the details are crucial, a message under an user interaction or condition means the former is triggered by the latter. An action (message, user interaction or condition) can trigger multiple messages. These messages might not be in the same cell. Multiple messages in a details do not indicates they are all triggered by the same user interaction or condition. An arrow only indicates a change in state (or junction).
         <h2>Example</h2>
         <p>In this example, the data flow of the action selecting tab is presented. <br>
