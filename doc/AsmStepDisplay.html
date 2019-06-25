@@ -16,9 +16,24 @@ custom_css: memberships.css
     <div class="container">
         <button type="button" class="Button" onclick="location.href='javascript:history.back()'">Back</button>
                 <br>
-        <p>Persistent states:</p>
+        <h2>Persistent states</h2>
         <ul>
-            <li>TabId
+            <li>RunMode
+                 <li>SymbolMap
+                 <li>FlasgHaveChanged
+                 <li>ClockTime
+                 <li>Content
+                 <li>Decorations
+                 <li>CurrentTabWidgets
+                 <li>DialogBox
+                 <li>DialogUpdated
+                 <li>TabId
+                     </ul>
+                <h2>Conditions</h2>
+                <ul>
+                    <li>passed: returned by the function addResultsToTestbench
+                <li>result: returned by the function writeTest
+                <li>tB: returned by the function getTBWithTab
                 </ul>
         <div style="text-align:center;" >
             <img src="AsmStepDisplay.png">
