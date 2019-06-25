@@ -54,35 +54,58 @@ custom_css: index.css
 </div>
 
 <div class="section grey">
-<div class="Grid container">
-<div id="philosophy-text" class="Grid-cell u-size4of6 u-before1of6 u-after1of6">
-<h1 class="small-title center-text mega-margin">Model-View-Update</h1>
-<p class="center-text mega-margin">VisUAL2 follows the pattern of MVU:</p>
-</div>
-</div>
-<div class="Grid small-container">
-<div class="Grid-cell u-size1of3 emoji-card">
-<img src="assets/model.png" alt="model" class="emoji-img center-margin large-margin">
-<h1 class="center-text medium-margin">Model</h1>
-<p class="center-text">Immutable data structure that contains the state of the application
-<br>Function init produces the initial model</p>
+    <div class="Grid container">
+        <div id="philosophy-text" class="Grid-cell u-size4of6 u-before1of6 u-after1of6">
+            <h1 class="small-title center-text mega-margin">Model-View-Update</h1>
+            <p class="center-text mega-margin">VisUAL2 follows the pattern of MVU:</p>
+        </div>
+    </div>
+    <div class="Grid small-container">
+        <div class="Grid-cell u-size1of3 emoji-card">
+            <img src="assets/model.png" alt="model" class="emoji-img center-margin large-margin">
+            <h1 class="center-text medium-margin">Model</h1>
+            <p class="center-text">Immutable data structure that contains the state of the application
+                <br>Function init produces the initial model
+            </p>
+        </div>
+
+        <div class="Grid-cell u-size1of3 emoji-card">
+            <img src="assets/view.png" alt="view" class="emoji-img center-margin large-margin">
+            <h1 class="center-text medium-margin">View</h1>
+            <p class="center-text">Pure function that produces user interface (as React elements) with the current model. When user interacts with the UI, a message is sent to “Update” </p>
+        </div>
+
+        <div class="Grid-cell u-size1of3 emoji-card">
+            <img src="assets/update.png" alt="update" class="emoji-img center-margin large-margin">
+            <h1 class="center-text medium-margin">Update</h1>
+            <p class="center-text">Pure function that produces the new model with the message and previous model.</p>
+        </div>
+    </div>
 </div>
 
-<div class="Grid-cell u-size1of3 emoji-card">
-<img src="assets/view.png" alt="view" class="emoji-img center-margin large-margin">
-<h1 class="center-text medium-margin">View</h1>
-<p class="center-text">Pure function that produces user interface (as React elements) with the current model. When user interacts with the UI, a message is sent to “Update” </p>
+<div class="section">
+    <div class="Grid container">
+        <div class="Grid-cell left-text u-size5of12 u-after1of12">
+            <h1 class="small-title mega-margin">Acknowledgements</h1>
+            <p class="mega-margin">Visual2 was inspired by Salman Arif's MEng Final Year Project that created <a href="https://salmanarif.bitbucket.io/visual/" rel="nofollow">Visual</a>.
+                <br>
+                The initial code for Visual2 was created by Dr. Tom Clarke and the 2018 3rd year HLP students at EEE, Imperial College London. Particular thanks to:
+                <ul>
+                    <li>Angelos Filos (created initial Monaco-FABLE skeleton)</li>
+                    <li>Lorenzo Silvestri</li>
+                    <li>Thomas Carotti</li>
+                    <li>Douglas Brion</li>
+                    <li>Christopher Macca</li>
+                </ul>
+                <p>Other excellent code from HLP may be incorporated so that is a minimal initial list of substantive contributors.</p>
+                <p>Other acknowledgements:</p>
+                <ul>
+                    <li>The <a href="https://github.com/Microsoft/monaco-editor">Monaco editor</a></li>
+                    <li>The <a href="https://github.com/fable-compiler/Fable">FABLE</a> F# to Javascript compiler</li>
+                    <li><a href="http://ethanschoonover.com/solarized" rel="nofollow">Solarised Colors</a></li>
+                </ul>
+            </p>
+        </div>
+        <div class="Grid-cell explore-projects-blank"></div>
+    </div>
 </div>
-
-<div class="Grid-cell u-size1of3 emoji-card">
-<img src="assets/update.png" alt="update" class="emoji-img center-margin large-margin">
-<h1 class="center-text medium-margin">Update</h1>
-<p class="center-text">Pure function that produces the new model with the message and previous model.</p>
-</div>
-
-</div>
-</div>
-
-<!-- Join the Flock -->
-
-
