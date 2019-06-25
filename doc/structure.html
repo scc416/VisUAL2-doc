@@ -46,49 +46,47 @@ custom_css: memberships.css
         
         <p>Electron thus allows code written for a browser (HTML + Javascript) to be run as a desktop app with the additional capability of desktop filesystem access via communication between the two processes.<br>Both processes run Javascript under Node.</p>
         
-        <style type="text/css">
-            .tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
-            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-            .tg .tg-de2y{border-color:#333333;text-align:left;vertical-align:top}
-            </style>
-        <table class="tg">
-            <tr>
-                <td class="tg-de2y">Process</td>
-                <td class="tg-de2y">Project</td>
-                <td class="tg-de2y">Source</td>
-                <td class="tg-de2y">Executable Code</td>
-            </tr>
-            <tr>
-                <td class="tg-de2y">electron main</td>
-                <td class="tg-de2y">./src/main/main.fsproj</td>
-                <td class="tg-de2y">./src/main/main.fs</td>
-                <td class="tg-de2y">./main.js</td>
-            </tr>
-            <tr>
-                <td class="tg-de2y">electron app</td>
-                <td class="tg-de2y">n/a</td>
-                <td class="tg-de2y">./app/index.html</td>
-                <td class="tg-de2y">(no change)</td>
-            </tr>
-            <tr>
-                <td class="tg-de2y">electron app</td>
-                <td class="tg-de2y">n/a</td>
-                <td class="tg-de2y">./app/monaco-init.js</td>
-                <td class="tg-de2y">(no change)</td>
-            </tr>
-            <tr>
-                <td class="tg-de2y">electron app</td>
-                <td class="tg-de2y">./src/renderer/renderer.fsproj</td>
-                <td class="tg-de2y">./src/renderer/*.fs</td>
-                <td class="tg-de2y">renderer.js</td>
-            </tr>
-            <tr>
-                <td class="tg-de2y">electron app</td>
-                <td class="tg-de2y">./src/emulate/emulator.fsproj</td>
-                <td class="tg-de2y">./src/emulator/*.fs</td>
-                <td class="tg-de2y">renderer.js</td>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Project</th>
+                    <th>Source</th>
+                    <th>Executable Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>electron main</td>
+                    <td><code>./src/main/main.fsproj</code></td>
+                    <td><code>./src/main/main.fs</code></td>
+                    <td><code>./main.js</code></td>
+                </tr>
+                <tr>
+                    <td>electron app</td>
+                    <td>n/a</td>
+                    <td><code>./app/index.html</code></td>
+                    <td>(no change)</td>
+                </tr>
+                <tr>
+                    <td>electron app</td>
+                    <td>n/a</td>
+                    <td><code>./app/monaco-init.js</code></td>
+                    <td>(no change)</td>
+                </tr>
+                <tr>
+                    <td>electron app</td>
+                    <td><code>./src/renderer/renderer.fsproj</code></td>
+                    <td><code>./src/renderer/*.fs</code></td>
+                    <td><code>renderer.js</code></td>
+                </tr>
+                <tr>
+                    <td>electron app</td>
+                    <td><code>./src/emulate/emulator.fsproj</code></td>
+                    <td><code>./src/emulator/*.fs</code></td>
+                    <td><code>renderer.js</code></td>
+                </tr>
+            </tbody>
         </table>
         <p>The <code>main.fs</code> source configures electron start-up and is boilerplate. It is transpiled to the root project directory so it can be automatically picked up by Electron.</p>
         <p>The app code is arranged as two F# projects, Emulator and Renderer, each with its own directory. Renderer has Emulator as a dependency. The separation allows all the non-web-based code (which can equally be run and tested under .Net) to be run and tested under F# directly in addition to being transpiled and run under Electron.</p>
