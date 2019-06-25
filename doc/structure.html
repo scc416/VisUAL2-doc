@@ -15,6 +15,9 @@ custom_css: memberships.css
 
 <div class="section">
     <div class="Grid membership-container container">
+        <p>
+        <button type="button" class="Button Button--tertiary" onclick="location.href='javascript:history.back()'">Back</button>
+        </p>
         <p>The code in this project is designed to be platform-independent with minimal hassle, as was VisUAL, and is distributed as separate binaries for each of the main desktop platforms generated from this project with "yarn pack-all".</p>
         <p>Whereas VisUAL uses Java to achieve platform-independence this project uses Javascript/HTML. However, in order to make code maintainable nearly all of the source is written in F#.</p>
         <h2>Project Structure: package.json</h2>
@@ -23,10 +26,6 @@ custom_css: memberships.css
        <li>dependencies: node libraries that the executable code (and development code) needs</li>
        <li>dev-dependencies: node libraries only needed by development tools</li>
         </ul>
-        
-        Defines the in-project shortcut commands, therefore when we use "yarn <stript_key>" is equivalent
-        to calling "<script_value>". For example, in the root of the project, running in the terminal
-        "yarn launch" is equivalent to running "electron .".
         
         <h1>Code Structure</h1>
         <p>
