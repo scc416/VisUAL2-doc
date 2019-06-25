@@ -15,7 +15,7 @@ custom_css: memberships.css
 
 <div class="section">
     <div class="Grid membership-container container">
-        The code in this project is designed to be platform-independent with minimal hassle, as was VisUAL, and is distributed as separate binaries for each of the main desktop platforms generated from this project with `yarn pack-all`.
+        The code in this project is designed to be platform-independent with minimal hassle, as was VisUAL, and is distributed as separate binaries for each of the main desktop platforms generated from this project with "yarn pack-all".
         
         Whereas VisUAL uses Java to achieve platform-independence this project uses Javascript/HTML. However, in order to make code maintainable nearly all of the source is written in F#.
         
@@ -24,15 +24,15 @@ custom_css: memberships.css
         ## Project Structure: package.json
         
         Electron bundles [Chromium](https://www.chromium.org/) (View) and [node.js](https://nodejs.org/en/) (Engine),
-        therefore as in every `node.js` project, the `package.json` file specifies the (Node) module dependencies.
+        therefore as in every "node.js" project, the "package.json" file specifies the (Node) module dependencies.
         
-        * dependencies: node libraries that the executable code (and development code) needs
-        * dev-dependencies: node libraries only needed by development tools
+       <li>dependencies: node libraries that the executable code (and development code) needs
+       <li>dev-dependencies: node libraries only needed by development tools
         
         
-        Additionally, the section `"scripts"`:
+        Additionally, the section "scripts":
         
-        ```json
+        "json
         {
         ...
         "scripts": {
@@ -42,18 +42,18 @@ custom_css: memberships.css
         },
         ...
         }
-        ```
+        "
         
-        Defines the in-project shortcut commands, therefore when we use `yarn <stript_key>` is equivalent
-        to calling `<script_value>`. For example, in the root of the project, running in the terminal
-        `yarn launch` is equivalent to running `electron .`.
+        Defines the in-project shortcut commands, therefore when we use "yarn <stript_key>" is equivalent
+        to calling "<script_value>". For example, in the root of the project, running in the terminal
+        "yarn launch" is equivalent to running "electron .".
         
         ## Code Structure
         
         The source code consists of two distinct sections transpiled separately to Javascript to make a complete [Electron](https://electronjs.org/) application.
         
-        * The *electron main process* runs the electron parent process under the desktop native OS, it starts the app process and provides desktop access services to it.
-        * The electron client (app) process runs under Chromium in a simulated browser environment (isolated from the native OS).
+       <li>The *electron main process* runs the electron parent process under the desktop native OS, it starts the app process and provides desktop access services to it.
+       <li>The electron client (app) process runs under Chromium in a simulated browser environment (isolated from the native OS).
         
         Electron thus allows code written for a browser (HTML + Javascript) to be run as a desktop app with the additional capability of desktop filesystem access via communication between the two processes.
         
@@ -61,103 +61,103 @@ custom_css: memberships.css
         
         | Process | Project | Source | Executable Code|
         |----------|-----------|-------|----------|
-        | electron main| `./src/main/main.fsproj` | `./src/main/main.fs` | `./main.js`|
-        | electron app |  n/a |  `./app/index.html` | (no change)|
-        | electron app | n/a | `./app/monaco-init.js` | (no change)|
-        | electron app | `./src/renderer/renderer.fsproj`| `./src/renderer/*.fs` | `renderer.js`|
-        | electron app | `./src/emulate/emulator.fsproj` | `./src/emulator/*.fs` | `renderer.js`|
+        | electron main| "./src/main/main.fsproj" | "./src/main/main.fs" | "./main.js"|
+        | electron app |  n/a |  "./app/index.html" | (no change)|
+        | electron app | n/a | "./app/monaco-init.js" | (no change)|
+        | electron app | "./src/renderer/renderer.fsproj"| "./src/renderer/*.fs" | "renderer.js"|
+        | electron app | "./src/emulate/emulator.fsproj" | "./src/emulator/*.fs" | "renderer.js"|
         
-        The `main.fs` source configures electron start-up and is boilerplate. It is transpiled to the root project directory so it can be automatically picked up by Electron.
+        The "main.fs" source configures electron start-up and is boilerplate. It is transpiled to the root project directory so it can be automatically picked up by Electron.
         
         The app code is arranged as two F# projects, Emulator and Renderer, each with its own directory. Renderer has Emulator as a dependency. The separation allows all the non-web-based code (which can equally be run and tested under .Net) to be run and tested under F# directly in addition to being transpiled and run under Electron.
         
-        The Monaco Editor component has some additional Javascript setup, mainly the syntax highlighting, which has not been ported to F# (though it should be!). All this Javascript code is contained in `monaco-init.js` and run before the renderer code.
+        The Monaco Editor component has some additional Javascript setup, mainly the syntax highlighting, which has not been ported to F# (though it should be!). All this Javascript code is contained in "monaco-init.js" and run before the renderer code.
         
-        Finally the GUI skeleton and the script references that run `monaco-init.js` and then `renderer.js` under Chromium are all contained in the top-level app `index.html` file.
+        Finally the GUI skeleton and the script references that run "monaco-init.js" and then "renderer.js" under Chromium are all contained in the top-level app "index.html" file.
         
-        The code that turns the F# project source into `renderer.js` is the FABLE compiler [fable-compiler](http://fable.io/) followed by the Node Webpack bundler that combines multiple Javascript files into a single `renderer.js`. Note that the FABLE compiler is distributed as a node package so gets set up automatically with other Node components.
+        The code that turns the F# project source into "renderer.js" is the FABLE compiler [fable-compiler](http://fable.io/) followed by the Node Webpack bundler that combines multiple Javascript files into a single "renderer.js". Note that the FABLE compiler is distributed as a node package so gets set up automatically with other Node components.
         
-        The compile process is controlled by the above `.fsproj` files (defining the F# source) and `./webpack.config.js` which defines how Webpack combines F# outputs for both electron main and electron app processes and where the executable code is put (see above). This is boilerplate which you do not need to change; normally the F# project files are all that needs to be modified.
+        The compile process is controlled by the above ".fsproj" files (defining the F# source) and "./webpack.config.js" which defines how Webpack combines F# outputs for both electron main and electron app processes and where the executable code is put (see above). This is boilerplate which you do not need to change; normally the F# project files are all that needs to be modified.
         
         
-        ### `webpack.config.js`
+        ### "webpack.config.js"
         
-        The `Webpack` configuration file, called when `yarn start` is executed, fires a process that watches changes to `src` folder files and transpiles the `F#` source files to `js` automatically on file save.
-        For example, the `main.js` file is generated by src/main/main.fs.
+        The "Webpack" configuration file, called when "yarn start" is executed, fires a process that watches changes to "src" folder files and transpiles the "F#" source files to "js" automatically on file save.
+        For example, the "main.js" file is generated by src/main/main.fs.
         
         ## File Structure
         
-        ### `src` folder
+        ### "src" folder
         
-        #### `src/Emulator`
+        #### "src/Emulator"
         
-        The emulator source `F#` code. This is referenced as subproject, although under FABLE it is compiled uniformly with the renderer.
+        The emulator source "F#" code. This is referenced as subproject, although under FABLE it is compiled uniformly with the renderer.
         
-        #### `src/Renderer`
+        #### "src/Renderer"
         
         The web-app GUI and Monaco editor interface source code.
         
-        #### `src/main`
+        #### "src/main"
         
         Contains the F# source for the Electron startup main process code (mostly boilerplate).
         
         
         
-        ### `app` folder
+        ### "app" folder
         
         The web-app, view, startup files.
         
-        #### `app/index.html`
+        #### "app/index.html"
         
         The markup code for the view.
-        `src/Renderer/Ref.fs` module accesses the elements defined in this DOM tree.
+        "src/Renderer/Ref.fs" module accesses the elements defined in this DOM tree.
         
-        #### `app/css`
+        #### "app/css"
         
-        `CSS` code to prettify the `index.html` elements.
+        "CSS" code to prettify the "index.html" elements.
         
-        #### `app/js`
+        #### "app/js"
         
-        The `js` scripts loaded by the `index.html`, **after** the DOM elements (statically defined) are rendered.
+        The "js" scripts loaded by the "index.html", **after** the DOM elements (statically defined) are rendered.
         
-        ##### `app/js/monaco-init.js`
+        ##### "app/js/monaco-init.js"
         
-        `Monaco Editor` setup script.
+        "Monaco Editor" setup script.
         
-        ##### `app/js/vs`
+        ##### "app/js/vs"
         
         This subdirectory is copied by webpack from ./node_modules/monaco-editor/min/vs.
         
-        It works around the fact that _packaging tools_ do not understand the non-standard Monaco loader, which loads Monaco editor files. Therefore to make things work the Monaco loader dependencies are all copied to the app directly in this directory. Note that extra code in the `webpack.config` script to allow this.
+        It works around the fact that _packaging tools_ do not understand the non-standard Monaco loader, which loads Monaco editor files. Therefore to make things work the Monaco loader dependencies are all copied to the app directly in this directory. Note that extra code in the "webpack.config" script to allow this.
         
         
         
         ## Reinstalling compiler and libraries
         
-        The code requires a global installation of `dotnet` and `node`/`npm`. This does not need changing and is unlikely to cause trouble. Later versions of dotnet SDK or node can usually be installed without trouble
+        The code requires a global installation of "dotnet" and "node"/"npm". This does not need changing and is unlikely to cause trouble. Later versions of dotnet SDK or node can usually be installed without trouble
         
         
         All the dependencies are local and installed by yarn (node modules) or dotnet (dotnet assemblies).
         
-        WARNING: `dotnet` assemblies are cached locally at machine level by dotnet. This sometimes goes wrong leading to strange compilation errors. It can be cured very simply by clearing the `dotnet` assembly caches, which is done in `setup.bat`.
+        WARNING: "dotnet" assemblies are cached locally at machine level by dotnet. This sometimes goes wrong leading to strange compilation errors. It can be cured very simply by clearing the "dotnet" assembly caches, which is done in "setup.bat".
         
         To reinstall the build environment (without changing project code):
         
-        ```
+        "
         setup.bat
-        ```
+        "
         
         ## Packaging VisUAL2 as binaries
         
-        After you have compiled code (and checked it works) `yarn pack-all` will run electron packager and generate `./dist/os-name/*` files. See also `run-packager-all.bat` if using windows host to make macOS binary. See [the packaging issue](https://github.com/ImperialCollegeLondon/Visual2/issues/7) for more details of how this has been customised to work. Note that if this breaks you can still run individual targets as below.
+        After you have compiled code (and checked it works) "yarn pack-all" will run electron packager and generate "./dist/os-name/*" files. See also "run-packager-all.bat" if using windows host to make macOS binary. See [the packaging issue](https://github.com/ImperialCollegeLondon/Visual2/issues/7) for more details of how this has been customised to work. Note that if this breaks you can still run individual targets as below.
         
         Useful shortcuts for specific common target OS:
-        * `yarn pack-osx` (macOS - but see below if running from windows host)
-        * `yarn pack-win` (windows)
-        * `yarn pack-linux` (linux)
+       <li>"yarn pack-osx" (macOS - but see below if running from windows host)
+       <li>"yarn pack-win" (windows)
+       <li>"yarn pack-linux" (linux)
         
         
-        **Note on macOS binaries**. These cannot be packaged as DMG (and therefore used) except on a macOS host. On macOS you need to run `yarn make-osx-dmg` which will FIRST run `yarn pack-osx` and then generate the macOS DMG file as `./dist/visual2-osx.dmg`.
+        **Note on macOS binaries**. These cannot be packaged as DMG (and therefore used) except on a macOS host. On macOS you need to run "yarn make-osx-dmg" which will FIRST run "yarn pack-osx" and then generate the macOS DMG file as "./dist/visual2-osx.dmg".
         
         ## Boilerplate Development
         
@@ -165,18 +165,18 @@ custom_css: memberships.css
         
         There are five distinct sources for this:
         
-        * `./app/js/monaco-init.js`. This is setup code for Monaco editor and explained in the [Monaco](https://microsoft.github.io/monaco-editor/index.html)  documentation.
-        * `*.fsproj`. These are the dotnet core project files for F# which should be changed to add F# dependencies or source files. They are simple and well documented in any of the F# Getting Started guides. Also, they can be changed in a GUI by both VS code / Ionide, and Visual Studio. The Ionide GUI change may not work as of May 2018 (try it).
-        * `./package.json`. This is instructions to Yarn and FABLE (v1.x) to compile the F# source to JS with Node JS dependencies. Well documented by [fable-compiler](https://github.com/fable-compiler/Fable).
-        * `./webpack.config` Instructions to `webpack` to bundle the JS files generated by FABLE. Well documented by [webpack](https://webpack.js.org/), but note the need to copy files caused by the non-standard Monaco loader.
-        * `setup.bat` or `setup.sh`. Code to bootstrap and get initial binary dependencies for F# projects dotnet.
+       <li>"./app/js/monaco-init.js". This is setup code for Monaco editor and explained in the [Monaco](https://microsoft.github.io/monaco-editor/index.html)  documentation.
+       <li>"*.fsproj". These are the dotnet core project files for F# which should be changed to add F# dependencies or source files. They are simple and well documented in any of the F# Getting Started guides. Also, they can be changed in a GUI by both VS code / Ionide, and Visual Studio. The Ionide GUI change may not work as of May 2018 (try it).
+       <li>"./package.json". This is instructions to Yarn and FABLE (v1.x) to compile the F# source to JS with Node JS dependencies. Well documented by [fable-compiler](https://github.com/fable-compiler/Fable).
+       <li>"./webpack.config" Instructions to "webpack" to bundle the JS files generated by FABLE. Well documented by [webpack](https://webpack.js.org/), but note the need to copy files caused by the non-standard Monaco loader.
+       <li>"setup.bat" or "setup.sh". Code to bootstrap and get initial binary dependencies for F# projects dotnet.
         
         Other top-level files (never changed manually):
         
-        * `yarn.lock` auto-generated by yarn contains the package versions currently used of all node packages. These can get upgraded by `yarn upgrade`. Upgrading to latest versions is normally but not always trouble-free.
-        * `paket.lock`, `paket.dependencies`. Files used by Paket to track nuget (.Net) packages. This project has only _development-time_ .Net dependencies and these do not need to be upgraded.
-        * `Nuget.Config`. Used by NuGet. You _can_ view the project under Visual Studio and change packages in a GUI via NuGet but this is not recommended.
-        * `ARM.Monaco.Editor.sln`. this solution file allows all three F# projects to be integrated by Visual Studio or Ionode. It is useful for editing code, but compiling is done via FABLE which uses information from `*.fsproj` files and ignores the `*.sln` file.
+       <li>"yarn.lock" auto-generated by yarn contains the package versions currently used of all node packages. These can get upgraded by "yarn upgrade". Upgrading to latest versions is normally but not always trouble-free.
+       <li>"paket.lock", "paket.dependencies". Files used by Paket to track nuget (.Net) packages. This project has only _development-time_ .Net dependencies and these do not need to be upgraded.
+       <li>"Nuget.Config". Used by NuGet. You _can_ view the project under Visual Studio and change packages in a GUI via NuGet but this is not recommended.
+       <li>"ARM.Monaco.Editor.sln". this solution file allows all three F# projects to be integrated by Visual Studio or Ionode. It is useful for editing code, but compiling is done via FABLE which uses information from "*.fsproj" files and ignores the "*.sln" file.
 
     </div>
 </div>

@@ -19,7 +19,7 @@ custom_css: memberships.css
         <div style="text-align:center;">
         </div>
         <br>
-        <h1>Instructions</h1>
+        <h2>Instructions</h2>
         <p>Flow of data is explained with diagrams and tables (Read user guide for model-based state diagram that are not discussed in this report).<br>
         The items in the first column of the tables are either state or state change:<br>
         State: number prefix with i, m or e, represent by a circle on the diagram<br>
@@ -34,17 +34,17 @@ custom_css: memberships.css
         Junctions in diagram aim to make the flow of data clearer. Different actions (message, user interaction and/or condition) can cause different state change and/or trigger different message. Arrows pointing out of a junction indicate action(s) is leading to different message or state.<br>
         In the second column of the tables, there are the details of the state (change). For a state, change(s) in state is listed. For a state change, it might include user interaction, messages and/or conditions in sequence:</p>
         <ul>
-        <li>User interaction: Itemised, any of the itemised user interaction can trigger the message below
-        <li>Message: Enumerated, only the last message causes a change in the state (in many cases there is only one message, and this message causes a change in the state)
-        <li>Condition: not enumerate or itemized, based on the state of the model or conditions defined. If a condition is not defined, then it is part of the model (type model is defined in “Refs.fs”)
+        <li>User interaction: Itemised, any of the itemised user interaction can trigger the message below</li>
+        <li>Message: Enumerated, only the last message causes a change in the state (in many cases there is only one message, and this message causes a change in the state)</li>
+        <li>Condition: not enumerate or itemized, based on the state of the model or conditions defined. If a condition is not defined, then it is part of the model (type model is defined in “Refs.fs”)</li>
         </ul>
         The order of the details are crucial, a message under an user interaction or condition means the former is triggered by the latter. An action (message, user interaction or condition) can trigger multiple messages. These messages might not be in the same cell. Multiple messages in a details do not indicates they are all triggered by the same user interaction or condition. An arrow only indicates a change in state (or junction).
         <h2>Example</h2>
         <p>In this example, the data flow of the action selecting tab is presented. <br>
         The initial model has a non-empty editors map, therefore tab header(s) is displayed for user to select. When user click on button of tab x, this triggers the message SelectFileTab (state change 1). State change 2 and 3 indicate 2 different states. If x is equal to TabId in state, state remains as i (state change 2). If x is not equal to TabId in state, state become e (stage change 3).<br>
-        Persistent states:</p>
+        <h2>Persistent states</h2>
         <ul>
-            <li>TabId
+            <li>TabId</li>
         </ul>
         <div style="text-align:center;" >
             <img src="SelectFileTab.png">
